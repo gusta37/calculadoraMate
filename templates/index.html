@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Ángulo Óptimo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title has-text-primary has-text-centered">Calculadora de Ángulo Óptimo</h1>
+            <form action="" method="post">
+                <div class="field">
+                    <label class="label">Distancia</label>
+                    <div class="control">
+                      <input class="input" type="number" name="distancia" placeholder="Ingresa la distancia en metros" step="any" inputmode="numeric">
+                    </div>
+                  </div>
+                  
+                  <div class="field">
+                    <label class="label">Altura</label>
+                    <div class="control">
+                      <input class="input" type="number" name="altura" placeholder="Ingresa la altura en metros" step="any" inputmode="numeric">
+                    </div>
+                  </div>
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-link" type="submit" name="accion" value="calcular">Calcular</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-light" type="submit" name="accion" value="borrar">Borrar</button>
+                    </div>
+                </div>
+            </form>
+
+            {% if resultado %}
+                <div class="notification is-primary mt-4" id="resultado">
+                    {{ resultado }}
+                </div>
+            {% endif %}
+
+            <div class="is-flex is-justify-content-center mt-5">
+                <img src="https://www.aicacyp.ar/wp-content/uploads/2016/07/Comunicado-de-prensa.jpg" alt="logo">
+            </div>
+        </div>
+    </section>
+    <section>
+        <footer style="position: fixed; bottom: 0; left: 50%; transform: translateX(-50%);">
+            <p>&copy; 2024 Calculadora de Ángulo Óptimo. Todos los derechos reservados. Desarrollado por Los Desprogramadores-ISPC</p>
+        </footer>
+    </section>
+</body>
+</html>
